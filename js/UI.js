@@ -50,4 +50,20 @@ class UI {
 
 		this.markers.addTo(this.mapa);
 	}
+	// Buscador
+	obtenerSugerencias(busqueda) {
+		this.api.obtenerDatos().then((datos) => {
+			// obtener los datos
+            const resultados = datos.respuestaJSON.results;
+            
+            // Enviar el JSON y la búsqueda para el filtadrado
+            this.filtrarSugerencias(resultados, busqueda);
+		});
+    }
+    // Filtra las sugerencias en base al input
+    filtrarSugerencias(resultado, busqueda {
+        // Filtrar con .filter
+
+        // Mostrar los pines
+    }
 }
